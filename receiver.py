@@ -41,6 +41,7 @@ class RabbitmqServer:
     def callback(ch, method, properties, body):
         Payload = body.decode("utf-8")
         Payload = ast.literal_eval(Payload)
+
         print("Data Received : {}".format(Payload))
 
     def start_server(self):
